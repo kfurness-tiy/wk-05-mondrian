@@ -82,7 +82,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "div {\n  border: 2px solid black;\n  height: 20px; }\n\n.parent {\n  display: flex;\n  flex-direction: column;\n  height: 600px;\n  width: 600px; }\n\n.row1 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  height: 33%; }\n\n.row2 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  height: 33%; }\n\n.row3 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  height: 33%; }\n\n.row3_1 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start; }\n\n.row3_2 {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start; }\n\n.left_col {\n  width: 40%;\n  height: 100%; }\n", ""]);
 
 	// exports
 
