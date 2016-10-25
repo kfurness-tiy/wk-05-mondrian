@@ -1,8 +1,7 @@
-function refresh () {
+function newColor () {
   document.getElementsByClassName("color")[0].style.backgroundColor = color();
   document.getElementsByClassName("color")[1].style.backgroundColor = color();
   document.getElementsByClassName("color")[2].style.backgroundColor = color();
-
 }
 
 function color() {
@@ -13,4 +12,4 @@ function color() {
   return rgbColor;
 }
 
-document.querySelector(".refresh").addEventListener('click', refresh);
+document.querySelector(".refresh").addEventListener('click', newColor);
