@@ -83,7 +83,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  font-family: Helvetica, sans-serif; }\n\ndiv {\n  box-sizing: border-box; }\n\n.parent {\n  display: flex;\n  flex-direction: column;\n  height: 500px;\n  width: 500px; }\n\n.row1 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  height: 33%;\n  border-bottom: 10px solid black; }\n  .row1 .left_col {\n    background-color: #d64854; }\n\n.row2 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  height: 33%;\n  border-bottom: 10px solid black; }\n\n.row3 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  height: 33%; }\n\n.row3_1 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  height: 100%; }\n\n.row3_2 {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  width: 30%;\n  height: 100%; }\n\n.row3_3 {\n  width: 30%;\n  height: 100%;\n  border-left: 10px solid black; }\n\n.left_col {\n  width: 40%;\n  height: 100%;\n  border-right: 10px solid black; }\n\n.right_col {\n  width: 60%;\n  height: 100%; }\n\n.col1a {\n  width: 25%;\n  height: 100%;\n  background-color: #e551f4; }\n\n.col1b {\n  width: 75%;\n  height: 100%;\n  border-left: 10px solid black; }\n\n.col2a {\n  height: 80%;\n  width: 100%;\n  background-color: #1c6eb4; }\n\n.col2b {\n  height: 20%;\n  width: 100%;\n  border-top: 10px solid black; }\n", ""]);
+	exports.push([module.id, "body {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  font-family: Helvetica, sans-serif; }\n\ndiv {\n  box-sizing: border-box; }\n\nbutton {\n  padding: 10px;\n  margin-top: 20px;\n  background-color: black;\n  color: white;\n  border-radius: 15px;\n  border: none;\n  font-size: 1.25em; }\n\n.parent {\n  display: flex;\n  flex-direction: column;\n  height: 500px;\n  width: 500px; }\n\n.row1 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  height: 33%;\n  border-bottom: 10px solid black; }\n  .row1 .left_col {\n    background-color: #bfe698; }\n\n.row2 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  height: 33%;\n  border-bottom: 10px solid black; }\n\n.row3 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  height: 33%; }\n\n.row3_1 {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  height: 100%; }\n\n.row3_2 {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  width: 30%;\n  height: 100%; }\n\n.row3_3 {\n  width: 30%;\n  height: 100%;\n  border-left: 10px solid black; }\n\n.left_col {\n  width: 40%;\n  height: 100%;\n  border-right: 10px solid black; }\n\n.right_col {\n  width: 60%;\n  height: 100%; }\n\n.col1a {\n  width: 25%;\n  height: 100%;\n  background-color: #54b06b; }\n\n.col1b {\n  width: 75%;\n  height: 100%;\n  border-left: 10px solid black; }\n\n.col2a {\n  height: 80%;\n  width: 100%;\n  background-color: #025885; }\n\n.col2b {\n  height: 20%;\n  width: 100%;\n  border-top: 10px solid black; }\n", ""]);
 
 	// exports
 
@@ -401,11 +401,19 @@
 /***/ function(module, exports) {
 
 	function refresh () {
-	  console.log('cats');
-	  document.getElementsByClassName("color")[0].style.backgroundColor = 'blue';
-	  // "rgb(random(255),random(255),random(255))";
+	  document.getElementsByClassName("color")[0].style.backgroundColor = color();
+	  document.getElementsByClassName("color")[1].style.backgroundColor = color();
+	  document.getElementsByClassName("color")[2].style.backgroundColor = color();
+
 	}
 
+	function color() {
+	  red = Math.floor(Math.random() * 255 );
+	  green = Math.floor(Math.random() * 255 );
+	  blue = Math.floor(Math.random() * 255 );
+	  rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+	  return rgbColor;
+	}
 
 	document.querySelector(".refresh").addEventListener('click', refresh);
 
