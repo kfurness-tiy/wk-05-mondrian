@@ -56,8 +56,10 @@ function chooseColor (input) {
 
 function toScreen(chosen) {
   console.log(chosen);
-  // var num = randomDiv();
-  document.getElementsByClassName('random')[2].style.backgroundColor = chosen;
+  var num = randomDiv();
+  console.log('num:');
+  console.log(num);
+  document.getElementsByClassName('random')[num].style.backgroundColor = chosen;
 }
 
 function pickColor () {
